@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.*.Rnb.cached
+_publish.R
+TAUR-bookdown.Rproj
+*.Rproj
+
