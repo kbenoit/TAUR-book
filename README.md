@@ -10,7 +10,7 @@ Steps to build and view the book:
     bookdown::render_book("index.Rmd", "bookdown::gitbook")
     ```
         
-3.  View the book at https://kbenoit.github.io/bookdown-demo/_book/
+3.  View the book at https://kbenoit.github.io/TAUR-book/_book/
 
 To produce the book:
 
