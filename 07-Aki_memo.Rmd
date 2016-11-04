@@ -1,0 +1,92 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Bookdown Memo (by Aki)
+
+## install bookdown
+```
+devtools::install_github("rstudio/bookdown")
+```
+
+## working with a demo
+Fork a [demo-book](https://github.com/amatsuo/bookdown-demo)
+
+Clone the repo. Rroj file works only with the Preview version of RStudio.
+
+### Edit index.Rmd
+Following two lines in index.Rmd determine the style of book 
+```
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+```
+Options for theme of the book is avaialble [here](https://bookdown.org/yihui/bookdown/yaml-options.html)
+
+
+Other information (title, author etc) will be going this file as well.
+
+
+
+### Compile a book
+Use "Build book" in `Build` of RStudio. If you choose gitbook format, it will create a book in HTML format under _book folder. After compiling a book, a viewer for selected format will be opened. 
+
+If you are working in an existing project and do not see the option of `Build`, go to "Project Options" and change the build tool to "Website". "Build book" should take care of everything:
+
+1. Build a html book
+2. Generate a pdf-book through LaTeX
+3. Generate a epub book
+
+In order to check the output in a browser, open `index.html` in the `_book` folder. In browser preview, you can use `edit` function which redirects to a source of Rmd on github. The idea is that other conributors of the book edit source and send a pull-request.
+
+### Start a project from sratch
+
+Create a new project. Generate a new index.Rmd. The header should look like:
+
+```
+---
+title: "Index"
+author: "Akitaka Matsuo"
+date: "24 October 2016"
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+---
+```
+
+### Adding chapters
+Add a new Rmd file (need to delete headers)
+
+### Referencing figures and tables
+
+`\@{fig:figname}` and `\@{tab:tablename}`. Fignames defined after the syntax highlighting methods in code-chunks, like `{r nice-fig`.
+Go Chater 1 to see working examples.
+
+### Align equation
+This syntax works:
+
+```{latex}
+\begin{align}
+  a &= b \\
+  c &= d
+\end{align}
+```
+The code above creates following output
+\begin{align}
+  a &= b \\
+  c &= d
+\end{align}
+
+
+### Resources
+[More examples (e.g. shiny apps, widget)](https://bookdown.org/yihui/bookdown/components.html)
+
+[Video tutorials](https://www.rstudio.com/resources/webinars/introducing-bookdown/)
+
+
+
+
+
+
+
+
+
