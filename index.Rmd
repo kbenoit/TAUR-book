@@ -4,12 +4,9 @@ author: "Kenneth Benoit"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
-  bookdown::gitbook:
-    css: ["bootstrap-material-design.min.css", "ripples.min.css", "ubuntu-font.css"]
-    js: ["material.min.js", "ripples.min.js"]
-    includes:
-      in_header: webfont.html
-    split_by: rmd
+ bookdown::html_book:
+    toc: yes
+    css: toc.css
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike

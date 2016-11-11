@@ -1,57 +1,44 @@
 <!DOCTYPE html>
-<html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Text Analysis Using R</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="Supply Description.">
-  <meta name="generator" content="bookdown 0.1.18 and GitBook 2.6.7">
-
-  <meta property="og:title" content="Text Analysis Using R" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="Supply Description." />
-  <meta name="github-repo" content="kbenoit/TAUR-book" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Text Analysis Using R" />
-  
-  <meta name="twitter:description" content="Supply Description." />
-  
-
-<meta name="author" content="Kenneth Benoit">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Text Analysis Using R" />
+<meta property="og:type" content="book" />
 
 
-<meta name="date" content="2016-11-04">
+<meta property="og:description" content="Supply Description." />
+<meta name="github-repo" content="kbenoit/TAUR-book" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  
-  
+<meta name="author" content="Kenneth Benoit" />
 
-<link rel="next" href="01-intro.html">
+<meta name="date" content="2016-11-11" />
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Supply Description.">
+
+<title>Text Analysis Using R</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 
 
-
-
-
-
-
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-
-
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
@@ -89,70 +76,73 @@ code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Ann
 code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
-<link rel="stylesheet" href="bootstrap-material-design.min.css" type="text/css" />
-<link rel="stylesheet" href="ripples.min.css" type="text/css" />
-<link rel="stylesheet" href="ubuntu-font.css" type="text/css" />
+
+<link rel="stylesheet" href="toc.css" type="text/css" />
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
 </head>
 
 <body>
 
+<div class="container-fluid main-container">
 
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="01-intro.html"><a href="01-intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="02-literature.html"><a href="02-literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
-<li class="chapter" data-level="4" data-path="03-method.html"><a href="03-method.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
-<li class="chapter" data-level="5" data-path="04-application.html"><a href="04-application.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="04-application.html"><a href="04-application.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="04-application.html"><a href="04-application.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#prerequisites"><span class="toc-section-number">1</span> Prerequisites</a></li>
+<li><a href="2-intro.html#intro"><span class="toc-section-number">2</span> Introduction</a></li>
+<li><a href="3-literature.html#literature"><span class="toc-section-number">3</span> Literature</a></li>
+<li><a href="4-methods.html#methods"><span class="toc-section-number">4</span> Methods</a></li>
+<li class="has-sub"><a href="5-applications.html#applications"><span class="toc-section-number">5</span> Applications</a><ul>
+<li><a href="5-1-example-one.html#example-one"><span class="toc-section-number">5.1</span> Example one</a></li>
+<li><a href="5-2-example-two.html#example-two"><span class="toc-section-number">5.2</span> Example two</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="05-summary.html"><a href="05-summary.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
-<li class="chapter" data-level="7" data-path="06-references.html"><a href="06-references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
-<li class="chapter" data-level="8" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html"><i class="fa fa-check"></i><b>8</b> Bookdown Memo (by Aki)</a><ul>
-<li class="chapter" data-level="8.1" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#install-bookdown"><i class="fa fa-check"></i><b>8.1</b> install bookdown</a></li>
-<li class="chapter" data-level="8.2" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#working-with-a-demo"><i class="fa fa-check"></i><b>8.2</b> working with a demo</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#edit-index.rmd"><i class="fa fa-check"></i><b>8.2.1</b> Edit index.Rmd</a></li>
-<li class="chapter" data-level="8.2.2" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#compile-a-book"><i class="fa fa-check"></i><b>8.2.2</b> Compile a book</a></li>
-<li class="chapter" data-level="8.2.3" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#start-a-project-from-sratch"><i class="fa fa-check"></i><b>8.2.3</b> Start a project from sratch</a></li>
-<li class="chapter" data-level="8.2.4" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#adding-chapters"><i class="fa fa-check"></i><b>8.2.4</b> Adding chapters</a></li>
-<li class="chapter" data-level="8.2.5" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#referencing-figures-and-tables"><i class="fa fa-check"></i><b>8.2.5</b> Referencing figures and tables</a></li>
-<li class="chapter" data-level="8.2.6" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#align-equation"><i class="fa fa-check"></i><b>8.2.6</b> Align equation</a></li>
-<li class="chapter" data-level="8.2.7" data-path="07-Aki_memo.html"><a href="07-Aki_memo.html#resources"><i class="fa fa-check"></i><b>8.2.7</b> Resources</a></li>
+<li><a href="6-final-words.html#final-words"><span class="toc-section-number">6</span> Final Words</a></li>
+<li><a href="7-references.html#references"><span class="toc-section-number">7</span> References</a></li>
+<li class="has-sub"><a href="8-bookdown-memo-by-aki.html#bookdown-memo-by-aki"><span class="toc-section-number">8</span> Bookdown Memo (by Aki)</a><ul>
+<li><a href="8-1-install-bookdown.html#install-bookdown"><span class="toc-section-number">8.1</span> install bookdown</a></li>
+<li class="has-sub"><a href="8-2-working-with-a-demo.html#working-with-a-demo"><span class="toc-section-number">8.2</span> working with a demo</a><ul>
+<li><a href="8-2-working-with-a-demo.html#edit-index.rmd"><span class="toc-section-number">8.2.1</span> Edit index.Rmd</a></li>
+<li><a href="8-2-working-with-a-demo.html#compile-a-book"><span class="toc-section-number">8.2.2</span> Compile a book</a></li>
+<li><a href="8-2-working-with-a-demo.html#start-a-project-from-sratch"><span class="toc-section-number">8.2.3</span> Start a project from sratch</a></li>
+<li><a href="8-2-working-with-a-demo.html#adding-chapters"><span class="toc-section-number">8.2.4</span> Adding chapters</a></li>
+<li><a href="8-2-working-with-a-demo.html#referencing-figures-and-tables"><span class="toc-section-number">8.2.5</span> Referencing figures and tables</a></li>
+<li><a href="8-2-working-with-a-demo.html#align-equation"><span class="toc-section-number">8.2.6</span> Align equation</a></li>
+<li><a href="8-2-working-with-a-demo.html#resources"><span class="toc-section-number">8.2.7</span> Resources</a></li>
 </ul></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
-
-      </nav>
-    </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Text Analysis Using R</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
 <div id="header">
 <h1 class="title">Text Analysis Using R</h1>
 <h4 class="author"><em>Kenneth Benoit</em></h4>
-<h4 class="date"><em>2016-11-04</em></h4>
+<h4 class="date"><em>2016-11-11</em></h4>
 </div>
 <div id="prerequisites" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
@@ -162,61 +152,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
 
 </div>
-            </section>
+<p style="text-align: center;">
+<a href="2-intro.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
 
-          </div>
-        </div>
-      </div>
 
-<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+</div>
 
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"facebook": true,
-"twitter": true,
-"google": false,
-"weibo": false,
-"instapper": false,
-"vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
-"text": "Edit"
-},
-"download": ["TAUR-book.pdf", "TAUR-book.epub"],
-"toc": {
-"collapse": "subsection"
-}
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-});
+
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
-
 </html>
