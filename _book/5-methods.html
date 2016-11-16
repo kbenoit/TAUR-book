@@ -12,12 +12,12 @@
 <meta property="og:type" content="book" />
 
 
-<meta property="og:description" content="Supply Description." />
+<meta property="og:description" content="Text Analysis Using R, by Kenneth Benoit" />
 <meta name="github-repo" content="kbenoit/TAUR-book" />
 
 <meta name="author" content="Kenneth Benoit" />
 
-<meta name="date" content="2016-11-11" />
+<meta name="date" content="2016-11-16" />
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -26,13 +26,13 @@ MathJax.Hub.Config({
 </script>
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
 
-<meta name="description" content="Supply Description.">
+<meta name="description" content="Text Analysis Using R, by Kenneth Benoit">
 
 <title>Text Analysis Using R</title>
 
 <script src="libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="libs/bootstrap-3.3.5/css/simplex.min.css" rel="stylesheet" />
 <script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -83,7 +83,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </style>
 
 
-<link rel="stylesheet" href="toc.css" type="text/css" />
 
 <style type = "text/css">
 .main-container {
@@ -111,26 +110,27 @@ img {
 <div class="col-sm-12">
 <div id="TOC">
 <ul>
-<li><a href="index.html#prerequisites"><span class="toc-section-number">1</span> Prerequisites</a></li>
-<li><a href="2-intro.html#intro"><span class="toc-section-number">2</span> Introduction</a></li>
-<li><a href="3-literature.html#literature"><span class="toc-section-number">3</span> Literature</a></li>
-<li><a href="4-methods.html#methods"><span class="toc-section-number">4</span> Methods</a></li>
-<li class="has-sub"><a href="5-applications.html#applications"><span class="toc-section-number">5</span> Applications</a><ul>
-<li><a href="5-1-example-one.html#example-one"><span class="toc-section-number">5.1</span> Example one</a></li>
-<li><a href="5-2-example-two.html#example-two"><span class="toc-section-number">5.2</span> Example two</a></li>
+<li><a href="index.html#front-matter"><span class="toc-section-number">1</span> Front Matter</a></li>
+<li><a href="2-prerequisites.html#prerequisites"><span class="toc-section-number">2</span> Prerequisites</a></li>
+<li><a href="3-intro.html#intro"><span class="toc-section-number">3</span> Introduction</a></li>
+<li><a href="4-literature.html#literature"><span class="toc-section-number">4</span> Literature</a></li>
+<li><a href="5-methods.html#methods"><span class="toc-section-number">5</span> Methods</a></li>
+<li class="has-sub"><a href="6-applications.html#applications"><span class="toc-section-number">6</span> Applications</a><ul>
+<li><a href="6-1-example-one.html#example-one"><span class="toc-section-number">6.1</span> Example one</a></li>
+<li><a href="6-2-example-two.html#example-two"><span class="toc-section-number">6.2</span> Example two</a></li>
 </ul></li>
-<li><a href="6-final-words.html#final-words"><span class="toc-section-number">6</span> Final Words</a></li>
-<li><a href="7-references.html#references"><span class="toc-section-number">7</span> References</a></li>
-<li class="has-sub"><a href="8-bookdown-memo-by-aki.html#bookdown-memo-by-aki"><span class="toc-section-number">8</span> Bookdown Memo (by Aki)</a><ul>
-<li><a href="8-1-install-bookdown.html#install-bookdown"><span class="toc-section-number">8.1</span> install bookdown</a></li>
-<li class="has-sub"><a href="8-2-working-with-a-demo.html#working-with-a-demo"><span class="toc-section-number">8.2</span> working with a demo</a><ul>
-<li><a href="8-2-working-with-a-demo.html#edit-index.rmd"><span class="toc-section-number">8.2.1</span> Edit index.Rmd</a></li>
-<li><a href="8-2-working-with-a-demo.html#compile-a-book"><span class="toc-section-number">8.2.2</span> Compile a book</a></li>
-<li><a href="8-2-working-with-a-demo.html#start-a-project-from-sratch"><span class="toc-section-number">8.2.3</span> Start a project from sratch</a></li>
-<li><a href="8-2-working-with-a-demo.html#adding-chapters"><span class="toc-section-number">8.2.4</span> Adding chapters</a></li>
-<li><a href="8-2-working-with-a-demo.html#referencing-figures-and-tables"><span class="toc-section-number">8.2.5</span> Referencing figures and tables</a></li>
-<li><a href="8-2-working-with-a-demo.html#align-equation"><span class="toc-section-number">8.2.6</span> Align equation</a></li>
-<li><a href="8-2-working-with-a-demo.html#resources"><span class="toc-section-number">8.2.7</span> Resources</a></li>
+<li><a href="7-final-words.html#final-words"><span class="toc-section-number">7</span> Final Words</a></li>
+<li><a href="8-references.html#references"><span class="toc-section-number">8</span> References</a></li>
+<li class="has-sub"><a href="9-bookdown-memo-by-aki.html#bookdown-memo-by-aki"><span class="toc-section-number">9</span> Bookdown Memo (by Aki)</a><ul>
+<li><a href="9-1-install-bookdown.html#install-bookdown"><span class="toc-section-number">9.1</span> install bookdown</a></li>
+<li class="has-sub"><a href="9-2-working-with-a-demo.html#working-with-a-demo"><span class="toc-section-number">9.2</span> working with a demo</a><ul>
+<li><a href="9-2-working-with-a-demo.html#edit-index.rmd"><span class="toc-section-number">9.2.1</span> Edit index.Rmd</a></li>
+<li><a href="9-2-working-with-a-demo.html#compile-a-book"><span class="toc-section-number">9.2.2</span> Compile a book</a></li>
+<li><a href="9-2-working-with-a-demo.html#start-a-project-from-sratch"><span class="toc-section-number">9.2.3</span> Start a project from sratch</a></li>
+<li><a href="9-2-working-with-a-demo.html#adding-chapters"><span class="toc-section-number">9.2.4</span> Adding chapters</a></li>
+<li><a href="9-2-working-with-a-demo.html#referencing-figures-and-tables"><span class="toc-section-number">9.2.5</span> Referencing figures and tables</a></li>
+<li><a href="9-2-working-with-a-demo.html#align-equation"><span class="toc-section-number">9.2.6</span> Align equation</a></li>
+<li><a href="9-2-working-with-a-demo.html#resources"><span class="toc-section-number">9.2.7</span> Resources</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -139,13 +139,14 @@ img {
 </div>
 <div class="row">
 <div class="col-sm-12">
-<div id="applications" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p> 
+<div id="methods" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Methods</h1>
+<p>We describe our methods in this chapter.</p>
+
 </div>
 <p style="text-align: center;">
-<a href="4-methods.html"><button class="btn btn-default">Previous</button></a>
-<a href="5-1-example-one.html"><button class="btn btn-default">Next</button></a>
+<a href="4-literature.html"><button class="btn btn-default">Previous</button></a>
+<a href="6-applications.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>
