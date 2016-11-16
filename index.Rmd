@@ -5,15 +5,17 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
  bookdown::html_book:
+    theme: simplex
     toc: yes
-    css: toc.css
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: kbenoit/TAUR-book
-description: "Supply Description."
+description: "Text Analysis Using R, by Kenneth Benoit"
 ---
+
+This new information added by KB on 16 November 2016.
 
 # Prerequisites
 
